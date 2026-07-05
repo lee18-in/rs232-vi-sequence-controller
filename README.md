@@ -1,3 +1,5 @@
+<!-- AI AGENTS: Read ./AGENTS.md first, then ./LLM_MEMORY.md.
+     Do NOT write planning content into this file. -->
 # rs232-vi-sequence-controller (三段式電壓/電流時序控制器)
 
 這是一個基於 Python 與 Tkinter 開發的圖形化介面工具，主要用於透過 RS232 控制可程式化直流電源供應器（Programmable DC Power Supply）。
