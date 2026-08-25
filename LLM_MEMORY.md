@@ -1,10 +1,12 @@
 # LLM_MEMORY.md — 工作記憶(agent 讀寫;規則見 AGENTS.md,勿在此重複)
 
+> - **Language and Encoding Standards**: All system files, code annotations, memory files (`LLM_MEMORY.md`), and handover logs for this project are uniformly encoded in **UTF-8** and **Traditional Chinese** by default.
+
 ## A. 目前狀態(每次交接必更新)
 
 - 目前階段: build
-- 最後更新: 2026-07-06 16:45 / 當時階段: build
-- 最新 commit: a61843d [maintain] 升級 AI agent 工作流至 Playbook v2
+- 最後更新: 2026-08-25 17:14 / 當時階段: build
+- 交接基準 commit: 26ce48f [maintain] 更新 LLM_MEMORY.md 最新狀態
 - 進行中任務: 測試中
 - 阻塞點: 無
 
@@ -28,6 +30,12 @@
 - [ ]
 
 ## C. 交接日誌(只追加,不刪改;最新在最上,每筆一個小節)
+
+### 2026-08-25 17:14 [maintain] 使用工具: Claude Code
+
+- 完成了什麼: 依 Playbook Online v9 執行分支 C 升級（原版本 v2，無 `Playbook-Variant` 標記，§2 使用 commit 為交接機制，判定為 online 變體）：`AGENTS.md` 整份覆蓋至 v9 模板（新增交接基準 commit 機制、Review Loop 順序條款、巢狀範圍條款 §4、語言與編碼規範等；§5 早已指向 LLM_MEMORY，無需再搬遷）；A 區「最新 commit」欄改名為「交接基準 commit」；`scripts/hooks/pre-commit`、`commit-msg` 整份覆蓋為最新版，並執行 `git config core.hooksPath scripts/hooks`（先前檔案存在但從未啟用，等同 hook 從未真正生效過）；新增 `.gitattributes` 的 `scripts/hooks/* text eol=lf`；README.md 頂端補上語言與編碼規範引導行。覆蓋前 `AGENTS.md` 的舊版可用 `git show a61843d:AGENTS.md` 找回。
+- 下一個 agent 該做什麼: 無（純框架升級，無程式碼邏輯變更）
+- 地雷警告: 無
 
 ### 2026-07-06 16:45 [maintain] 使用工具: Claude Code
 
